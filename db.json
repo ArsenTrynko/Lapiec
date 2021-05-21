@@ -1,0 +1,74 @@
+{
+  "discount": [
+    {
+      "name": "Наша фирменная акция «2 + 1»",
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-e2c5e.appspot.com/o/images%2Faktsiya-dlya-sajta-21.jpg?alt=media&token=fbb9f07e-7f33-4d3a-8f45-60e65e26499b",
+      "id": 1
+    },
+    {
+      "name": "Приведи друга",
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-e2c5e.appspot.com/o/images%2Fbring-a-friend-small.jpg?alt=media&token=3fa7a9b3-2f06-406c-9ff6-4b58ceb03a67",
+      "id": 2
+    },
+    {
+      "name": "Самовивоз",
+      "description": "До 01.06.2021",
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-e2c5e.appspot.com/o/images%2Fsamovyviz.jpg?alt=media&token=132ade93-f541-46ba-8157-3c5b49858548",
+      "id": 3
+    }
+  ],
+  "pizza": [
+    {
+      "name": "Гавайська",
+      "description": "сир моцарела, соус вершковий, філе куряче, кукурудза, ананас, оливки, перець болгарський.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-e2c5e.appspot.com/o/images%2Fgavajska.png?alt=media&token=49e73601-398e-4c7d-a115-4abb1aed232c",
+      "price": "155",
+      "weight": "535",
+      "id": 1
+    },
+    {
+      "name": "Панчетта",
+      "description": "сир моцарела, соус кисло-солодкий, грудинка свинна, перець болгарський, огірок корнішон.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-e2c5e.appspot.com/o/images%2Fpanchetta.png?alt=media&token=5c2b958c-6495-4bbe-9306-1f5f2c59ea61",
+      "price": "153",
+      "weight": "440",
+      "id": 2
+    },
+    {
+      "name": "Пепероні",
+      "description": "сир моцарела, соус барбекю, пепероні, пармезан, рукола.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-e2c5e.appspot.com/o/images%2Fpaperoni.png?alt=media&token=b9e1b230-fb26-4033-bd88-a730efb86e36",
+      "price": "160",
+      "weight": "400",
+      "id": 3
+    }
+  ],
+  "deserts": [
+    {
+      "name": "Сирники",
+      "description": "сирники, карамельний соус, сметана",
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-e2c5e.appspot.com/o/images%2FSyrnyky.png?alt=media&token=4831a9d3-b159-42c8-aefc-ff0fc5621e8b",
+      "price": "75",
+      "weight": "240",
+      "id": 1
+    }
+  ],
+  "drinks": [
+    {
+      "name": "Coca Cola — 0,5 л",
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-e2c5e.appspot.com/o/images%2Fcola0.5.jpg?alt=media&token=5d0a72d0-53da-4cb1-8832-0f42d8034d54",
+      "price": "24",
+      "id": 1
+    }
+  ],
+  "salats": [
+    {
+      "name": "Салат Цезар зі смаженим курячим філе",
+      "description": "Салат айсберг, помідори, куряче м`ясо, сир пармезан, перепелині яйця, духмяні сухарики та фірмова заправка - соус «Цезар».",
+      "image": "https://firebasestorage.googleapis.com/v0/b/la-piec-e2c5e.appspot.com/o/images%2FTSezar-z-kurkoyu.png?alt=media&token=96eb5d38-ba63-418e-866e-f66ffbe4703f",
+      "price": "135",
+      "weight": "250",
+      "id": 1
+    }
+  ]
+}

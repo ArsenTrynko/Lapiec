@@ -1,0 +1,38 @@
+<section style="margin-top: 50px;" class="animateSection animated">
+  <div class="emptySpace80 emptySpace-lt60 emptySpace-sm45 emptySpace-xs25"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-8 col-lg-offset-2">
+        <div class="sectionTitle hidden-xs fadeInTop">
+          <h1 class="h1 as">Акции</h1>
+          <div class="emptySpace60 emptySpace-lt40 emptySpace-md40 emptySpace-sm30"></div>
+        </div>
+        <div class="row clear-sm-2 clear-lg-2 clear-md-2">
+          
+          <div class="col-sm-6"  *ngFor="let disc of userDiscounts">
+            <div class="discountProduct fadeInTop animationDelay-1">
+              <a  class="imgWrapper">
+                <img style="height: 478px;" width="600" height="600"
+                  [src]="disc.image"
+                  class="attachment-full size-full" alt=""
+                  [srcset]="disc.image"
+                  sizes="(max-width: 600px) 100vw, 600px"> </a>
+              <h5 class="h5 as">
+                <a >{{ disc.name }}</a>
+              </h5>
+              <a [routerLink]="[ '/discount-details', disc.id ]"
+                class="button">ВОСПОЛЬЗОВАТЬСЯ</a>
+            </div>
+            <div class="emptySpace45 emptySpace-xs25"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cityVector animateSection animated">
+  <div class="emptySpace80 emptySpace-lt60 emptySpace-sm45 emptySpace-xs25"></div>
+</section>

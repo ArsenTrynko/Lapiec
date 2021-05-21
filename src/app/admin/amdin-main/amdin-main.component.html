@@ -1,0 +1,14 @@
+<ul style="margin-top: 200px;" ngbNav #nav="ngbNav" class="nav-tabs">
+    <!-- <li ngbNavItem>
+      <a ngbNavLink [routerLink]="[ 'category' ]" routerLinkActive="active">Category</a>
+    </li> -->
+    <li ngbNavItem>
+      <a ngbNavLink [routerLink]="[ 'discount' ]" routerLinkActive="active">Discount</a>
+      </li>
+      <li ngbNavItem>
+        <a ngbNavLink [routerLink]="[ 'product' ]" routerLinkActive="active">Products</a>
+        </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
+  <router-outlet></router-outlet>
+  

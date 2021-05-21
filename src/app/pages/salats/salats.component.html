@@ -1,0 +1,173 @@
+<div style="margin-top: 50px;" class="section animateSection animated" itemscope="" itemtype="http://schema.org/Product">
+  <div class="emptySpace80 emptySpace-lt60 emptySpace-sm45 emptySpace-xs25"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="sectionTitle fadeInTop  hidden-xs">
+          <h1 class="h1 as" itemprop="title">Салаты</h1>
+          <div class="emptySpace60 emptySpace-lt40 emptySpace-md30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row clear-lg-3 clear-md-2">
+        <div class="col-sm-6 col-md-6 col-lg-4" *ngFor="let salat of userProducts">
+            <div class="productThumbnail style3 productItemAnimate animated">
+              <span class="productImage preview preloaded"
+                
+              [ngStyle]="{'background-image':'url(' + salat.image + ')'}">
+                <span class="productHover mobilePreload preview preloaded"
+
+                [ngStyle]="{'background-image':'url(' + salat.image + ')'}"></span>
+    
+                <span class="pizza-size-weight">
+                  
+                </span>
+              </span>
+              <div class="productInfoWrapp">
+                <div class="productDescription normall ">
+                  <div class="h5 as" itemprop="title">{{ salat.name }}</div>
+                  <p>{{ salat.description }}</p>
+                  <p>{{ salat.weight }} Гр</p>
+                    <span></span>
+    
+                </div>
+                <div class="productOrder">
+                  <div class="productPrice">
+                    <span  itemprop="price">{{ salat.price }}</span> <i itemprop="priceCurrency"
+                      content="UAH">грн</i>
+                  </div>
+                  <!-- <div class="productCountWrapper">
+                    <span class="productCount lessProduct"></span>
+                    <input type="text" maxlength="3" value="1">
+                    <span class="productCount moreProduct"></span>
+                  </div> -->
+                  <div class="button add-to-cart-product" data-id="104" (click)="addToStorage(salat)" data-cat="Салаты">Замовити</div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="emptySpace100 emptySpace-lt80 emptySpace-md60"></div>
+</div>
+
+<section class="cityVector animateSection animated">
+  <div class="vectorDecor left hidden-xs"
+    style="background-image: url(https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/img/bg-city-vectro-1.png);">
+    <div class="ink"></div>
+  </div>
+  <div class="vectorDecor right hidden-xs"
+    style="background-image: url(https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/img/bg-city-vectro-2.png);">
+    <div class="ink"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="moreInfoBlock">
+          <h2 class="h4 as fadeInTop">Что станет вкусным дополнением к пицце?</h2>
+          <div class="emptySpace40 emptySpace-md30 emptySpace-xs15"></div>
+          <div class="moreInfoContent fadeInTop animationDelay-1" style="height: 193px;">
+            <div class="simpleArticle">
+              <p>Пицца в традиционном виде существует уже около пяти веков, и за это время она полюбилась многим людям.
+                Сегодня блюдо часто украшает посиделки с коллегами или друзьями и любое семейное торжество.</p>
+              <p>Безусловно, это самое известное блюдо, пришедшее к нам из Италии. В каждом регионе страны пицца имеет
+                свою специфику: римская — более легкая, неаполитанская — достаточно калорийна, венецианская —
+                оригинальна. Мало кто задумывается над тем, с которыми легкими закусками или напитками совместить пиццу.
+                Узнайте, чем можно разнообразить вкус и подчеркнуть его пикантность.</p>
+              <p><b>Соусы</b></p>
+              <p>Обычно во время приготовления пиццы используются соусы из томатов или для барбекю. Это считается
+                стандартным вариантом. Однако в хороших сервисах доставки, как, например, «Lа П’єц», тесто
+                сбалансировано с соусом, чтобы блюдо не нуждалась других приложений.</p>
+              <p>Любители острых блюд могут добавить соус табаско — он приготовлен на основе перца чили. Табаско
+                считается неотъемлемой частью застолий в Южной Америке. Очень важно выдержать меру, чтобы острота не
+                перебила букет ароматов и вкус блюда. Достаточно добавить лишь несколько капель.</p>
+              <p><b>Салаты</b></p>
+              <p>Именно они помогут Вам сбалансировать соусы и начинки итальянского блюда. Прекрасно подойдут салаты из
+                свежих овощей. Некоторые привыкли заедать пиццу «Цезарем» или «Шопским» салатом. Но это не лучшие
+                варианты, ведь они имеют в своем составе мясные ингредиенты, как и большинство пицц, поэтому лучше
+                выбрать что-то более легкое.</p>
+              <p>Например, к пицце подойдут греческий салат или микс из свежих овощей и салатных листьев. Вместо мяса
+                лучше использовать твердый сыр, орехи или какой-то необычный соус. От тяжелых салатов с майонезом и
+                сметаной лучше отказаться. Лучше отдайте предпочтение оливковому маслу.</p>
+              <p>Итальянцы обычно заказывают одну пиццу на человека и салат или что-то из раздела antipasto. Если пицца
+                в итальянском меню значится как primo, это не значит, что надо заказать десерт. Есть риск, что в таком
+                случае Вы просто не осилите такое количество пищи.</p>
+              <p>Боитесь ошибиться и выбрать не тот салат? Позвоните в доставку пиццы «Lа П’єц» во Львове и
+                проконсультируйтесь перед тем, как сделать заказ. Вам быстро доставят вкусную пиццу, только испеченную в
+                дровяной печи. Благодаря доставке в термосумке она не остынет и сохранит все свои вкусовые качества.
+                Разнообразные салаты станут прекрасным дополнением к блюду, поэтому не медлите полакомиться вкусностями
+                — пиццерия «Lа П’єц» уже готова радовать Вас своими кулинарными шедеврами.</p>
+            </div>
+          </div>
+          <div class="emptySpace25"></div>
+          <div class="fadeInTop animationDelay-2">
+            <div class="moreContentToggle" data-text-show="Читать больше" data-text-hide="Скрыть">
+              Читать больше </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="emptySpace80 emptySpace-lt60 emptySpace-sm45 emptySpace-xs25"></div>
+</section>
+
+<script>
+  if (typeof dataLayer !== "undefined") {
+    dataLayer.push({
+      'event': 'view_item_list',
+      'ecommerce': {
+        'items': [{
+          "item_id": 104,
+          "item_name": "Салат Цезарь с жаренным куриным филе",
+          "price": "135",
+          "item_category": "Салаты",
+          "quantity": 1,
+          "index": 1
+        }, {
+          "item_id": 46567,
+          "item_name": "Инсалата ди Сальмоне",
+          "price": "144",
+          "item_category": "Салаты",
+          "quantity": 1,
+          "index": 2
+        }, {
+          "item_id": 46571,
+          "item_name": "Примавера",
+          "price": "109",
+          "item_category": "Салаты",
+          "quantity": 1,
+          "index": 3
+        }, {
+          "item_id": 65701,
+          "item_name": "Салат Цезарь с телятиной",
+          "price": "173",
+          "item_category": "Салаты",
+          "quantity": 1,
+          "index": 4
+        }, {
+          "item_id": 110,
+          "item_name": "Инсалата ди Фета",
+          "price": "122",
+          "item_category": "Салаты",
+          "quantity": 1,
+          "index": 5
+        }, {
+          "item_id": 111,
+          "item_name": "Инсалата ди Прошутто",
+          "price": "125",
+          "item_category": "Салаты",
+          "quantity": 1,
+          "index": 6
+        }, {
+          "item_id": 46569,
+          "item_name": "Инсалата ди Тоно",
+          "price": "137",
+          "item_category": "Салаты",
+          "quantity": 1,
+          "index": 7
+        }]
+      }
+    });
+  }
+
+</script>

@@ -1,0 +1,99 @@
+<div style="margin-top: 50px;" class="section animateSection animated" itemscope="" itemtype="http://schema.org/Product">
+  <div class="emptySpace80 emptySpace-lt60 emptySpace-sm45 emptySpace-xs25"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="sectionTitle fadeInTop  hidden-xs">
+          <h1 class="h1 as" itemprop="title">Десерты</h1>
+          <div class="emptySpace60 emptySpace-lt40 emptySpace-md30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row clear-lg-3 clear-md-2">
+        <div class="col-sm-6 col-md-6 col-lg-4" *ngFor="let desert of userProducts">
+            <div class="productThumbnail style3 productItemAnimate animated">
+              <span class="productImage preview preloaded"
+               
+              [ngStyle]="{'background-image':'url(' + desert.image + ')'}">
+                <span class="productHover mobilePreload preview preloaded"
+
+                [ngStyle]="{'background-image':'url(' + desert.image + ')'}"></span>
+    
+                <span class="pizza-size-weight">
+                  <span class="size"></span>
+
+                </span>
+              </span>
+              <div class="productInfoWrapp">
+                <div class="productDescription normall ">
+                  <div class="h5 as" itemprop="title">{{ desert.name }}</div>
+                  <p>{{ desert.description }}</p>
+                 
+
+                  <span class="weight">{{ desert.weight }} гр</span>
+                </div>
+                <div class="productOrder">
+                  <div class="productPrice">
+                    <span  itemprop="price">{{ desert.price }}</span> <i itemprop="priceCurrency"
+                      content="UAH">грн</i>
+                  </div>
+                  <!-- <div class="productCountWrapper">
+                    <span class="productCount lessProduct"></span>
+                    <input type="text" maxlength="3" value="1">
+                    <span class="productCount moreProduct"></span>
+                  </div> -->
+                  <div class="button add-to-cart-product" (click)="addToStorage(desert)" data-id="466692" data-cat="Десерты">Заказати</div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="emptySpace100 emptySpace-lt80 emptySpace-md60"></div>
+</div>
+
+
+<section class="cityVector animateSection animated">
+  <div class="vectorDecor left hidden-xs"
+    style="background-image: url(https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/img/bg-city-vectro-1.png);">
+    <div class="ink"></div>
+  </div>
+  <div class="vectorDecor right hidden-xs"
+    style="background-image: url(https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/img/bg-city-vectro-2.png);">
+    <div class="ink"></div>
+  </div>
+  <div class="emptySpace80 emptySpace-lt60 emptySpace-sm45 emptySpace-xs25"></div>
+</section>
+
+<script>
+  if (typeof dataLayer !== "undefined") {
+    dataLayer.push({
+      'event': 'view_item_list',
+      'ecommerce': {
+        'items': [{
+          "item_id": 466692,
+          "item_name": "Сырники",
+          "price": "75",
+          "item_category": "Десерты",
+          "quantity": 1,
+          "index": 1
+        }, {
+          "item_id": 466682,
+          "item_name": "Сырная запеканка",
+          "price": "82",
+          "item_category": "Десерты",
+          "quantity": 1,
+          "index": 2
+        }, {
+          "item_id": 466696,
+          "item_name": "Андруты",
+          "price": "65",
+          "item_category": "Десерты",
+          "quantity": 1,
+          "index": 3
+        }]
+      }
+    });
+  }
+
+</script>

@@ -1,0 +1,374 @@
+<section style="margin-top: 50px;" class="cityVector sectionFullH animateSection animated">
+  <div class="emptySpace80 emptySpace-lt60 emptySpace-sm45 emptySpace-xs25"></div>
+  <div class="vectorDecor left hidden-xs"
+    style="background-image: url(https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/img/bg-product-vector-1.png);">
+    <div class="ink"></div>
+  </div>
+  <div class="vectorDecor right hidden-xs"
+    style="background-image: url(https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/img/bg-product-vector-2.png);">
+    <div class="ink"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="sectionTitle hidden-xs fadeInTop">
+          <h1 class="h2 as">Оформити замовлення</h1>
+          <div class="emptySpace60 emptySpace-lt40 emptySpace-md30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row payMainWrapper">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="row">
+          <div class="col-lg-6 col-lg-push-6 col-my-lt-12">
+            <div class="payItems smallSlideLeft animationDelay-1">
+              <div class="table">
+                <div class="tr thead">
+                  <div class="tr">
+                    <div class="td"></div>
+                    <div class="td">Товар</div>
+                    <div class="td">Ціна</div>
+                    <div class="td">Кількість</div>
+                    <div class="td">Загалом</div>
+                  </div>
+                </div>
+                <div class="tr tbody">
+
+                    <!-- ------------------------------------------- -->
+                  <div class="tr productOrder" data-product-sku="00069" *ngFor="let product of cartProducts">
+                    <div class="td">
+                      <div class="delateProduct remove-cart-product-popup open-popup" data-rel="4"
+                        data-key="e836d813fd184325132fca8edcdfb40e" ></div>
+                    </div>
+                    <div class="td" data-mobile-title="Товар">
+                      <div class="smallProduct">
+                        <a  class="imgWrapper"
+                        [ngStyle]="{'background-image':'url(' + product.image + ')'}"></a>
+                        <div class="smallProductInfo">
+                          <h6 class="h6 as"><a >{{ product.name }}</a></h6>
+                          <p></p>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div class="td" data-mobile-productprice="Ціна">
+                      <div class=" singleItemPrice">
+                        <span>{{ product.price }}</span><i>грн</i>
+                      </div>
+                    </div>
+                    <div class="td" data-mobile-productcount="Кількість">
+                      <div class="productCountWrapper">
+                        <span class="productCount lessProduct " data-key="e836d813fd184325132fca8edcdfb40e"
+                          data-id="466"></span>
+                        <input class="product-qty" maxlength="3" type="text" data-old-val="1" value="1"
+                          data-key="e836d813fd184325132fca8edcdfb40e" data-id="466">
+                        <span class="productCount moreProduct update-cart-product"
+                          data-key="e836d813fd184325132fca8edcdfb40e" data-id="466"></span>
+                      </div>
+                    </div>
+                    
+                    <div class="td" data-mobile-fullprice="Загалом">
+                      <div class="itemPrice productPrice">
+                        <b class="tableMobTitle">Загалом: </b><span data-product-price="202"
+                          data-linetotal="202">{{ product.price }}</span><i>грн</i>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <!-- ------------------------------------------------ -->
+                </div>
+                <div class="tr tfoot">
+                  <div class="td">
+                    <div class="orderDiscount cart-discount">
+                      <p>Знижка:</p>
+                      <span>0</span>
+                      <i>грн</i>
+                    </div>
+                    <div class="fullPrice cart-total" data-blue-zone="500" data-red-zone="250" data-green-zone="150">
+                      <div class="subFullPrice" style="display:none;">
+                        <span></span>
+                        <i>грн</i>
+                      </div>
+                      <div class="totalFullPrice" style="display:block;">
+                        <p>Загалом:</p>
+                        <span>{{ totalOrderPrice }}</span>
+                        <i>грн</i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btnWrapper txtRight fadeInTop">
+              <div class="checkout-return-promocode">
+
+              </div>
+              <div class="emptySpace40 emptySpace-xs20"></div>
+              <div class="payCheckboxs text-left">
+                <label class="checkboxEntry radio ">
+                  <input id="pay" type="radio" name="payment_type" value="cash" class="payment-cash checked"
+                    checked="checked"><span>Оплата готівкою</span>
+                </label>
+                <label class="checkboxEntry radio ">
+                  <input id="pay2" type="radio" name="payment_type" value="card"
+                    class="payment-card "><span>Безготівкова оплата</span>
+                </label>
+              </div>
+              <div class="emptySpace40"></div>
+              <div class="hidden-lt  button btnColor2 orderButton  make-order" (click)="sendOrder()" data-count-clicks="1">ОФОРМИТИ ЗАМОВЛЕННЯ
+              </div>
+            </div>
+            <div class="emptySpace-lt60 emptySpace-md45 emptySpace-xs25"></div>
+          </div>
+          <div class="col-lg-6 col-lg-pull-6 col-my-lt-12 paySelect">
+            <div class="emptySpace30"></div>
+            <div class="payForm smallSlideRight">
+              <form id="make-order-form">
+                <input type="hidden" name="payment_type" value="cash">
+                <div class="emptySpace20 emptySpace-xs15"></div>
+                <label class="inputWrapper ">
+                  <i>Ваше ім`я*</i>
+                  <span><input class="simpleInput name" [(ngModel)]="name" name="name" type="text" value="" maxlength="60"></span>
+                  <span class="firstBorderElement"></span>
+                  <span class="secondBorderElement"></span>
+                </label>
+                <div class="emptySpace10"></div>
+                <label class="inputWrapper">
+                  <i>Телефон*</i>
+                  <span><input class="simpleInput tel" [(ngModel)]="phone" name="tel" type="text" value=""
+                      pattern="^(8|\+?\d{1,3})?[ -]?\(?(\d{3})\)?[ -]?(\d{3})[ -]?(\d{2})[ -]?(\d{2})$"></span>
+                  <span class="firstBorderElement"></span>
+                  <span class="secondBorderElement"></span>
+                </label>
+                <div class="emptySpace10"></div>
+               
+                    
+                <label class="inputWrapper ">
+                  <i class="textarea">Ваш коментар</i>
+                  <span><textarea class="simpleInput" [(ngModel)]="coment" name="comment" id="" maxlength="256" cols="30"
+                      rows="10"></textarea></span>
+                  <span class="firstBorderElement"></span>
+                  <span class="secondBorderElement"></span>
+                </label>
+                <div class="emptySpace10"></div>
+                <div class="sumoWrapper " data-delivery="driveway" style="display: none;">
+                  <i>Виберіть адресу самовивозу</i>
+                  <div class="SumoSelect sumo_delivery-address" tabindex="0"><select name="delivery-address"
+                      class="SelectBox SumoUnder" tabindex="-1">
+                      <option value="" selected="selected">Виберіть адресу самовивозу</option>
+                      <option value="Героїв УПА, 73">Героїв УПА, 73</option>
+                      <option value="Княгині Ольги, 120">Княгині Ольги, 120</option>
+                      <option value="Січових Стрільців, 10">Січових Стрільців, 10</option>
+                      <option value="Торф'яна, 10">Торф'яна, 10</option>
+                      <option value="Хуторівка, 59б">Хуторівка, 59б</option>
+                      <option value="Шевченка, 60">Шевченка, 60</option>
+                    </select>
+                    <p class="CaptionCont SelectBox" title=" Виберіть адресу самовивозу"><span> Виберіть адресу
+                        самовивозу</span><label><i></i></label></p>
+                    <div class="optWrapper">
+                      <ul class="options">
+                        <li class="opt selected"><label>Виберіть адресу самовивозу</label></li>
+                        <li class="opt"><label>Героїв УПА, 73</label></li>
+                        <li class="opt"><label>Княгині Ольги, 120</label></li>
+                        <li class="opt"><label>Січових Стрільців, 10</label></li>
+                        <li class="opt"><label>Торф'яна, 10</label></li>
+                        <li class="opt"><label>Хуторівка, 59б</label></li>
+                        <li class="opt"><label>Шевченка, 60</label></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" data-delivery="delivery,advance" style="display: block;">
+                  <div class="col-sm-4 col-md-4">
+                    <div class="sumoWrapper focus">
+                      <i>Місто*</i>
+                      <div class="SumoSelect sumo_city"><select [(ngModel)]="city" id="city" name="city"
+                          class="simpleInput ui-autocomplete-input" >
+                          <option value="Львів" selected="selected">Львів</option>
+                          <option value="Брюховичі">Брюховичі</option>
+                          <option value="Зубра">Зубра</option>
+                          <option value="Зимна Вода">Зимна Вода</option>
+                          <option value="Конопниця">Конопниця</option>
+                          <option value="Лапаївка">Лапаївка</option>
+                          <option value="Пасіки-Зубрицькі">Пасіки-Зубрицькі</option>
+                          <option value="Рудне">Рудне</option>
+                          <option value="Рясне-Руське">Рясне-Руське</option>
+                          <option value="Скнилів">Скнилів</option>
+                          <option value="Сокільники">Сокільники</option>
+                          <option value="Солонка">Солонка</option>
+                          <option value="Суховоля">Суховоля</option>
+                          <option value="Холодновідка">Холодновідка</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="emptySpace-xs10"></div>
+                  </div>
+                  <div class="col-sm-5 col-md-6">
+                    <div class="geoInputWrapper">
+                      <label class="inputWrapper ">
+                        <i>Вулиця*</i>
+                        <span><input [(ngModel)]="street" id="streetAutocomplete" name="street" class="simpleInput ui-autocomplete-input"
+                            type="text" value="" autocomplete="off"></span>
+                        <span class="firstBorderElement"></span>
+                        <span class="secondBorderElement"></span>
+                      </label>
+                      <!-- <span id="geoIcon" class="geoIcon geoVisible"></span> -->
+                    </div>
+                    <div class="emptySpace-xs10"></div>
+                  </div>
+                  <div class="col-sm-3 col-md-2">
+                    <label class="inputWrapper ">
+                      <i class="houseNumber">Номер будинку*</i>
+                      <span><input [(ngModel)]="numberHouse" id="houseNumber" name="house_num" class="simpleInput" maxlength="4" type="text"
+                          value=""></span>
+                      <span class="firstBorderElement"></span>
+                      <span class="secondBorderElement"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="callCheckboxs text-left" data-delivery="delivery" style="display: block;">
+                  <div class="emptySpace15"></div>
+                  <label class="checkboxEntry">
+                    <input type="checkbox" name="call"><span>Можете не телефонувати мені для підтвердження
+                      замовлення</span>
+                  </label>
+                </div>
+                <div class="row" data-visible="call" style="display: none;">
+                  <div class="emptyClear emptySpace10"></div>
+                  <div class="col-xs-6 col-md-3">
+                    <label class="inputWrapper ">
+                      <i>Під'їзд</i>
+                      <span><input name="entrance" class="simpleInput" value="" type="number" max="999999"></span>
+                      <span class="firstBorderElement"></span>
+                      <span class="secondBorderElement"></span>
+                    </label>
+                    <div class="emptySpace-sm10"></div>
+                  </div>
+                  <div class="col-xs-6 col-md-3">
+                    <label class="inputWrapper ">
+                      <i>Поверх</i>
+                      <span><input name="floor" class="simpleInput" value="" type="number" max="999999"></span>
+                      <span class="firstBorderElement"></span>
+                      <span class="secondBorderElement"></span>
+                    </label>
+                    <div class="emptySpace-sm10"></div>
+                  </div>
+                  <div class="col-xs-6 col-md-3">
+                    <label class="inputWrapper ">
+                      <i>Кв.\ офіс</i>
+                      <span><input name="flat_office" class="simpleInput" value="" type="number" max="999999"></span>
+                      <span class="firstBorderElement"></span>
+                      <span class="secondBorderElement"></span>
+                    </label>
+                  </div>
+                  <div class="col-xs-6 col-md-3">
+                    <label class="inputWrapper ">
+                      <i>Домофон</i>
+                      <span><input name="intercom" class="simpleInput" max="999999" value="" type="number"></span>
+                      <span class="firstBorderElement"></span>
+                      <span class="secondBorderElement"></span>
+                    </label>
+                  </div>
+                  <div class="emptyClear emptySpace10"></div>
+                  <div class="col-md-12">
+                    <label class="inputWrapper ">
+                      <i class="textarea">Коментар до адреси</i>
+                      <span><textarea class="simpleInput" name="comment_adrress" maxlength="256" cols="30"
+                          rows="10"></textarea></span>
+                      <span class="firstBorderElement"></span>
+                      <span class="secondBorderElement"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row" data-delivery="delivery,advance" style="display: block;">
+                  <div class="col-xs-12 mobileBtn">
+                    <div class="emptySpace15"></div>
+                    <div id="StartSearch" class="button">Пошук адреси</div>
+                  </div>
+                </div>
+                <div class="deliveryWarning" data-delivery="delivery,advance" style="display: block;">
+                  <div class="errorMsg empty-address">
+                    <img src="https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/fonts/svg-icons/warning.svg"
+                      alt="warning">
+                    <p>Введіть вашу адресу та номер будинку</p>
+                  </div>
+                  <div class="errorMsg empty-house">
+                    <img src="https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/fonts/svg-icons/warning.svg"
+                      alt="warning">
+                    <p>Невірна адреса</p>
+                  </div>
+                  <div class="errorMsg lowOrder">
+                    <img src="https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/fonts/svg-icons/warning.svg"
+                      alt="warning">
+                    <p>Вибачте, сума Вашого замовлення недостатня для даної зони</p>
+                  </div>
+                  <div class="errorMsg noDelivery">
+                    <img src="https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/fonts/svg-icons/warning.svg"
+                      alt="warning">
+                    <p>Вибачте, Ваша адреса поза межею доставки</p>
+                  </div>
+                  <div class="errorMsg noData">
+                    <img src="https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/fonts/svg-icons/warning.svg"
+                      alt="warning">
+                    <p>Вибачте Ваша адреса відсутня в базі. <br>Зв'яжіться з нашими операторами для уточнення адреси
+                      доставки</p>
+                  </div>
+                </div>
+                <input type="submit" style="display: none">
+              </form>
+              <div class="emptySpace20 emptySpace-xs15"></div>
+              <div id="map" class="map-wrapper map-checkout" style="display: block;" data-delivery="delivery,advance"
+                data-lon="23.9874005" data-lat="49.8256574"
+                data-marker="https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/img/marker2.png"
+                data-placeholder="Адреса">
+                <div class="ol-viewport"
+                  style="position: relative; overflow: hidden; width: 100%; height: 100%; touch-action: none;"
+                  data-view="3"><canvas class="ol-unselectable" width="735" height="538"
+                    style="width: 100%; height: 100%; display: block;"></canvas>
+                  <div class="ol-overlaycontainer"></div>
+                  <div class="ol-overlaycontainer-stopevent">
+                    <div class="ol-overlay-container ol-selectable" style="position: absolute; display: none;">
+                      <div id="map-markers"></div>
+                    </div>
+                    <div class="ol-zoom ol-unselectable ol-control"><button class="ol-zoom-in" type="button"
+                        title="Zoom in">+</button><button class="ol-zoom-out" type="button" title="Zoom out">−</button>
+                    </div>
+                    <div class="ol-rotate ol-unselectable ol-control ol-hidden"><button class="ol-rotate-reset"
+                        type="button" title="Reset rotation"><span class="ol-compass"
+                          style="transform: rotate(0rad);">⇧</span></button></div>
+                    <div class="ol-attribution ol-unselectable ol-control ol-collapsed">
+                      <ul>
+                        <li>© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors.</li>
+                      </ul><button type="button" title="Attributions"><span>i</span></button>
+                    </div>
+                    <div id="gcd-container" class="ol-geocoder gcd-txt-container">
+                      <div class="gcd-txt-control">
+                        <input type="text" id="gcd-input-query" class="gcd-txt-input" autocomplete="off"
+                          placeholder="Адреса">
+                        <span class="gcd-txt-glass"></span>
+                        <button type="button" id="gcd-input-reset" class="gcd-txt-reset gcd-hidden"></button>
+                      </div>
+                      <ul class="gcd-txt-result"></ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+

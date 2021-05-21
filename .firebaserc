@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "sushistat-a5f04": {
+      "hosting": {
+        "lapiec": [
+          "sushistat-a5f04"
+        ]
+      }
+    }
+  }
+}

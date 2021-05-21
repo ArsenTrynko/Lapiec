@@ -1,0 +1,233 @@
+<div style="margin-top: 50px;" class="section animateSection animated" itemscope="" itemtype="http://schema.org/Product">
+  <div class="emptySpace80 emptySpace-lt60 emptySpace-sm45 emptySpace-xs25"></div>
+  <div class="container">
+    <div class="row hidden-xs">
+      <div class="col-xs-12">
+        <div class="sectionTitle fadeInTop ">
+          <h1 class="h1 as" itemprop="title">Напитки</h1>
+          <div class="emptySpace60 emptySpace-lt40 emptySpace-md40 emptySpace-sm30"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row clear-lg-4 clear-md-3 clear-sm-2">
+    
+        <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let drink of userProducts">
+            <div class="productThumbnail style2 productItemAnimate animated">
+              <span class="productImage preview preloaded"
+               
+              [ngStyle]="{'background-image':'url(' + drink.image + ')'}">
+                <span class="productHover mobilePreload preview preloaded"
+                 
+
+                [ngStyle]="{'background-image':'url(' + drink.image + ')'}"></span>
+              </span>
+              <div class="productInfoWrapp">
+                <div class="productDescription normall ">
+                  <div class="h5 as" itemprop="title">{{ drink.name }}</div>
+                  <p></p>
+                </div>
+                <div class="productOrder">
+                  <div class="productPrice">
+                    <span  itemprop="price">{{ drink.price }}</span> <i itemprop="priceCurrency"
+                      content="UAH">грн</i>
+                  </div>
+                  <!-- <div class="productCountWrapper">
+                    <span class="productCount lessProduct"></span>
+                    <input type="text" maxlength="3" value="1">
+                    <span class="productCount moreProduct"></span>
+                  </div> -->
+                </div>
+                <div class="button add-to-cart-product" (click)="addToStorage(drink)" data-id="99" data-cat="Напитки">Замовити</div>
+              </div>
+            </div>
+            <div class="emptySpace40 emptySpace-md0"></div>
+          </div>
+
+        <div class="emptySpace40 emptySpace-md0"></div>
+      </div>
+    </div>
+  </div>
+
+
+<section class="cityVector animateSection animated">
+  <div class="emptySpace20 emptySpace-lt60 emptySpace-sm10 emptySpace-xs0"></div>
+  <div class="vectorDecor left hidden-xs"
+    style="background-image: url(https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/img/bg-city-vectro-1.png);">
+    <div class="ink"></div>
+  </div>
+  <div class="vectorDecor right hidden-xs"
+    style="background-image: url(https://www.lapiec-pizza.com.ua/wp-content/themes/lapiec/img/bg-city-vectro-2.png);">
+    <div class="ink"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="moreInfoBlock">
+          <h2 class="h4 as fadeInTop">Какие напитки подходят к пицце?</h2>
+          <div class="emptySpace40 emptySpace-xs15"></div>
+          <div class="moreInfoContent fadeInTop animationDelay-1" style="height: 145px;">
+            <div class="simpleArticle">
+              <p>Для того, чтобы полноценно ощутить вкус блюда, желательно удачно подобрать напитки. Пицца не является
+                исключением, хотя она и стала предметом споров среди гурманов. Что же пить с этим блюдом? Ответ будет
+                зависеть от гастрономических предпочтений человека, региональных особенностей и вкусов.</p>
+              <p><b>Что говорит история?</b></p>
+              <p>Давайте вспомним, как все было с самого начала. Пицца в привычном для нас виде появилась на столах
+                знатных итальянцев примерно в конце 16 века. Без сомнения, самым популярным напитком в Италии неизменно
+                было вино. Жители этой страны считают такой напиток лучшим приложением к пицце. Чаще всего они подают
+                красное, реже — белое. В качестве альтернативы можно использовать обычную чистую или минеральную воду.
+                Принято думать, что ей не под силу перебить истинный вкус изысканного блюда.</p>
+              <p>Однако за пределами родины пиццы ни вино, ни вода не стали популярными дополнениями. Например, в Чехии
+                принято запивать еду бехеровкой. А в Америке блюдо давно вышло за пределы ресторанов. Появилась
+                специальная доставка, что сделало пиццу неотъемлемой частью многих корпоративов и встреч с друзьями.
+                Здесь уже не было речи об изящных бокалах с вином — на смену им пришло пиво.</p>
+              <p>В Америке популярны острые блюда с салями и другим мясными наполнением. Они очень хорошо сочетаются с
+                пивом, поэтому выбор был даже в какой-то степени очевидным. Пиво хорошо подчеркивает специи и пряности и
+                делает вкус блюда довольно пикантным.</p>
+              <p>Сейчас этот напиток стал самым популярным приложением для пиццы во всем мире, даже молодое поколение
+                итальянцев находит в нем больше преимуществ, чем в вине. Эту традицию поддержали и немцы, ведь пиво для
+                них является традиционным напитком. А вот в Нидерландах или Франции еще очень популярны соки и
+                кока-кола.</p>
+              <p>Такие разнообразные сочетания доступны и у нас в Украине. Доставка пиццы «Lа Пьец» во Львове предлагает
+                за 30 минут доставить Вам не только горячую ароматную пиццу, испеченную в лучших итальянских традициях,
+                но и напитки, которые Вы пожелаете.</p>
+              <p>Вкус пиццы от «Lа Пьец» будет непревзойденным, ведь пиццерия заботится о том, чтобы блюда сохраняли
+                свои вкусовые качества и привлекательный аромат как можно дольше. Именно поэтому доставка осуществляется
+                в специальных термосумках. Благодаря этому пицца будет на вкус такой, как будто ее только достали из
+                печи. Уже хочется попробовать? Сделайте заказ в «Lа Пьец» и наслаждайтесь свежеиспеченной пиццей!</p>
+            </div>
+          </div>
+          <div class="emptySpace25"></div>
+          <div class="fadeInTop animationDelay-2">
+            <div class="moreContentToggle" data-text-show="Читать больше" data-text-hide="Скрыть">
+              Читать больше </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="emptySpace80 emptySpace-lt60 emptySpace-sm45 emptySpace-xs25"></div>
+</section>
+
+<script>
+  if (typeof dataLayer !== "undefined") {
+    dataLayer.push({
+      'event': 'view_item_list',
+      'ecommerce': {
+        'items': [{
+          "item_id": 99,
+          "item_name": "Coca Cola — 0,5л",
+          "price": "24",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 1
+        }, {
+          "item_id": 586,
+          "item_name": "Coca Cola — 1л",
+          "price": "33",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 2
+        }, {
+          "item_id": 467097,
+          "item_name": "Fanta — 0.5 л",
+          "price": "24",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 3
+        }, {
+          "item_id": 467093,
+          "item_name": "Fanta — 1 л",
+          "price": "33",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 4
+        }, {
+          "item_id": 467122,
+          "item_name": "Sprite — 0.5 л",
+          "price": "24",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 5
+        }, {
+          "item_id": 467125,
+          "item_name": "Sprite — 1 л",
+          "price": "33",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 6
+        }, {
+          "item_id": 467109,
+          "item_name": "Вода BonAqua негазированная 0.5 л",
+          "price": "20",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 7
+        }, {
+          "item_id": 467103,
+          "item_name": "Вода BonAqua негазированная 1 л",
+          "price": "29",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 8
+        }, {
+          "item_id": 46576,
+          "item_name": "Вода BonAqua &#8212; 0,5 л",
+          "price": "20",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 9
+        }, {
+          "item_id": 46579,
+          "item_name": "Вода BonAqua &#8212; 1 л",
+          "price": "29",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 10
+        }, {
+          "item_id": 22177,
+          "item_name": "Томатный сок, 1 л, ТМ “RICH”",
+          "price": "42",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 11
+        }, {
+          "item_id": 84,
+          "item_name": "Яблочный сок осветленный, 1 л, ТМ “RICH”",
+          "price": "42",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 12
+        }, {
+          "item_id": 602,
+          "item_name": "Апельсиновый нектар с мякотью, 1 л, ТМ “RICH”",
+          "price": "42",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 13
+        }, {
+          "item_id": 592,
+          "item_name": "Вишневый нектар осветленный, 1 л, ТМ “RICH”",
+          "price": "42",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 14
+        }, {
+          "item_id": 599,
+          "item_name": "Гранатовый нектар осветленный, 1 л, ТМ “RICH”",
+          "price": "42",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 15
+        }, {
+          "item_id": 595,
+          "item_name": "Экзотик Нектар, 1 л, ТМ “RICH”",
+          "price": "42",
+          "item_category": "Напитки",
+          "quantity": 1,
+          "index": 16
+        }]
+      }
+    });
+  }
+
+</script>
